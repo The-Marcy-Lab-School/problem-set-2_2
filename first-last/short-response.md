@@ -35,27 +35,27 @@
    ```
 
 5. **What does the following log? Explain why, ensuring to explain how `someName` and `busy` were declared?**
-  ```javascript
-  let name;
-  let nickname = 'ghost';
-  let someName = name || nickname;
-  let children = null;
-  let homework = 'lots';
-  let busy = children && homework;
+   ```javascript
+   let name;
+   let nickname = 'ghost';
+   let someName = name || nickname;
+   let children = null;
+   let homework = 'lots';
+   let busy = children && homework;
 
-  someName ? console.log(`${someName} evaluates to true`) : console.log(`{someName} evaluates to false.``);
+   someName ? console.log(`${someName} evaluates to true`) : console.log(`{someName} evaluates to false.``);
 
-  busy ? console.log(`${busy} evaluates to true`) : console.log(`{busy} evaluates to false.``);
-  ```
+   busy ? console.log(`${busy} evaluates to true`) : console.log(`{busy} evaluates to false.``);
+   ```
 
 6. **The following code causes an infinite loop. Why?**
-  ```javascript
-  let counter = 0;
+   ```javascript
+   let counter = 0;
 
-  while (counter <= 5) {
-    counter = 1;
-    console.log(`count: ${counter}`);
-    counter += 1;
-  }
-  ```
+   while (counter <= 5) {
+     counter = 1;
+     console.log(`count: ${counter}`);
+     counter += 1;
+   }
+   ```
 
