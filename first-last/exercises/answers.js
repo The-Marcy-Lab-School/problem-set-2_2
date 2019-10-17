@@ -15,3 +15,7 @@ function chessBoard() {
   // write your answer to question three below
 
 }
+
+triangle();
+fizzBuzz();
+chessBoard();
