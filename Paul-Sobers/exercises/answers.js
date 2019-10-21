@@ -1,6 +1,12 @@
 // Question 1: Looping a Triange
 function triangle() {
   // write your answer to question one below
+let sum = "#";
+for (let num = 1 ; num <= 7; num += 1) {
+ sum = sum + '#';
+  console.log(sum);
+}
+
 
 }
 
@@ -29,4 +35,15 @@ function fizzBuzz() {
 function chessBoard() {
   // write your answer to question three below
 
+let odd = (" # # # #");
+let even = ("# # # #");
+let counter = 0;
+while (counter <= 7) {
+  counter += 1;
+  if (counter % 2 === 0){
+    console.log(even);
+  } else {
+    console.log(odd);
+  }
+}
 }
