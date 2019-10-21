@@ -35,17 +35,32 @@ function fizzBuzz() {
 // Question 3: Chess Board
 function chessBoard() {
   // write your answer to question three below
-  let line='';
-  
+  // let line='';
   for(let i=1;i<9;i++){
-    for(let col=1;col<5;col++){
-      if ((col%2)==0){
-        console.log(line +'#');
-        line+='#';
-      }else{
-        console.log(line +' ');
-        line+=' ';
+    let count=1;
+    let hashtag='';
+    if (i%2==0){
+      while(count<9){
+        if(count%2==0){
+          hashtag+='#';
+          count+=1;
+        }else{
+          hashtag+=' ';
+          count+=1;
+        }
       }
+      console.log(hashtag);
+    }else{
+      while(count<9){
+        if(count%2==0){
+          hashtag+=' ';
+          count+=1;
+        }else{
+          hashtag+='#';
+          count+=1;
+        }
+      }
+      console.log(hashtag);
     }
   }
 }
