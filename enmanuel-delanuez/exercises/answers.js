@@ -26,15 +26,28 @@ function fizzBuzz() {
 // Question 3: Chess Board
 function chessBoard() {
   // write your answer to question three below
-  for (let i = 1; i <= 64; i++) {
-    if (i % 2 == 0) {
-      console.log('#');
-    } else {
-      console.log(' ');
+  let rowNum = 1;
+  while (rowNum < 8) {
+    if (rowNum % 2 === 1) {
+      let content = '';
+      while (content.length <= 6) {
+        content += ' '
+        content += '#'
+      }
+      content += '\n'
+      rowNum ++;
+       console.log(content);
     }
-  }
-  
-  for (let i = 1; i <= 8; i++) {
     
+    if (rowNum % 2 === 0) {
+      let content = '#';
+      while (content.length <= 6) {
+        content += ' '
+        content += '#'
+      }
+      content += '\n'
+      rowNum ++;
+       console.log(content);
+    }
   }
 }
