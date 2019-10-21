@@ -35,12 +35,16 @@ function fizzBuzz() {
 // Question 3: Chess Board
 function chessBoard() {
   // write your answer to question three below
+  let line='';
+  
   for(let i=1;i<9;i++){
     for(let col=1;col<5;col++){
       if ((col%2)==0){
-        console.log('#');
+        console.log(line +'#');
+        line+='#';
       }else{
-        console.log(' ');
+        console.log(line +' ');
+        line+=' ';
       }
     }
   }
