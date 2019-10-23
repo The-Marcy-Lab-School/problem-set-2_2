@@ -3,10 +3,12 @@
 
 1. **What does the code below log? Why?**
    ```javascript
-      let singer = 'Omar Apollo';
+      {
+         let singer = 'Omar Apollo';
+      }
       console.log(`My favorite singer is ${singer}`);
    ```
-   This logs `'My favorite singer is Omar Apollo'` because the use of `${}` interpolates the value of a binding into the string.
+   This logs `ReferenceError: singer is not defined` because `console.log()` is looking for the variable `singer` in its global scope and cannot see it because it has a block scope. This is also supported by the keyword `let`, whereas the keyword `var` has a global or function scope.
 
 2. **What happens when we run the following code? Why?**
    ```javascript
@@ -16,7 +18,7 @@
    favorite = 'Maya';
    console.log(`Actually, ${favorite} is my favorite.`);
    ```
-   This logs `'Our favorite Marcy Lab family member is Juan Pablo'` because the binding `favorite` was declared with the keyword `const`, meaning it is a constant that can't be reassigned.
+   This logs `'Our favorite Marcy Lab family member is Juan Pablo'`. After, it logs a `TypeError` because the binding `favorite` was declared with the keyword `const` and we tried to reassign it before the second log which is not allowed.
 
 3. **What does the following code log? Why?**
    ```javascript
