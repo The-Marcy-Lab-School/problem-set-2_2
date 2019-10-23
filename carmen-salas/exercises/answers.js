@@ -38,16 +38,34 @@ function fizzBuzz() {
 //   Passing this string to console.log should show something like this:
 
 function chessBoard() {
-  let grid ='';
-  
-  for (var a = 0; a < 8; a++) {
-  for (var b = 0; b < 8; b++) {
-    grid += "# ";
+  for(let i=1;i<9;i++){ //loop
+    let col=1; // individual col where the hashes are plotted 
+    let row=''; //each row (empty string)
+    if (i %2 == 0){ //even rows
+      while(col < 9){
+        if(col %2 == 0){
+          row += '#';
+          col += 1;
+        }else{
+          row += ' ';
+          col += 1;
+        }
+      }
+      console.log(row);
+    }else{ //uneven rows
+      while(col < 9){
+        if(col %2 == 0){
+          row += ' ';
+          col += 1;
+        }else{
+          row += '#';
+          col += 1;
+        }
+      }
+      console.log(row);
+    }
   }
-  grid += " #";
-  console.log(grid);
-}
-}
+  }
 
 triangle();
 fizzBuzz();
