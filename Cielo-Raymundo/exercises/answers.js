@@ -35,10 +35,10 @@ function fizzBuzz() {
 // Question 3: Chess Board
 function chessBoard() {
   // write your answer to question three below
-  // let line='';
   for(let i=1;i<9;i++){
     let count=1;
     let hashtag='';
+    
     if (i%2==0){
       while(count<9){
         if(count%2==0){
