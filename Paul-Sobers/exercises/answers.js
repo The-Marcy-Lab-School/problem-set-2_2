@@ -1,10 +1,10 @@
 // Question 1: Looping a Triange
 function triangle() {
   // write your answer to question one below
-let sum = "#";
+let hash = "#";
 for (let num = 1 ; num <= 7; num += 1) {
- sum = sum + '#';
-  console.log(sum);
+ hash = hash + '#';
+  console.log(hash);
 }
 
 
@@ -16,15 +16,16 @@ function fizzBuzz() {
  let counter = 0;
  while (counter <= 100){
    counter += 1;
+    if (counter % 3 === 0 && counter % 5 === 0) {
+    console.log('fizzbuzz');
+   }
    if (counter % 3 === 0){
      console.log('fizz');
    } 
    if (counter % 5 === 0){
      console.log('buzz');
    }
-   if (counter % 3 === 0 && counter % 5 === 0) {
-     console.log('fizzbuzz');
-   } else{
+ else{
      console.log(counter);
    }
  }
