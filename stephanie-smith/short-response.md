@@ -63,4 +63,4 @@
      counter += 1;
    }
    ```
-   - It causes an infinite loop because `counter` is declared as 1, and it is before the console logs it. The addition comes after the variable is logged, so it never gets added. Doing the addition instead of having `counter` equal 1 will fix the problem.
+   - It causes an infinite loop because in the loop, `counter` is always reassigned to 1, meaning that it will never be greater than or equal to 5, where the loop ends. 

@@ -37,7 +37,7 @@ function chessBoard() {
 
   for(let i = 0; i < grid; i++) { //for column
     for(let j = 0; j < grid; j++) { //for rows, loop includes spaces which is why there are only 4 hashes
-      if((i + j) % 2 == 0) { //determines whether a space or hash will be used
+      if((i + j) % 2 === 0) { //determines whether a space or hash will be used
         board += ' '; //adds spacing
       }
       else {
