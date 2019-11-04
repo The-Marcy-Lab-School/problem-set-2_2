@@ -9,8 +9,8 @@
 
     console.log(`My favorite singer is ${singer});
    ```
-* This will log ‘My favorite singer is Omar Apollo’ because the variable is declared with the string ‘Omar Apollo’ and is being concatenated with the string “my favorite singer is”
-
+* This will log an errror becuase the varible 'singer' is declared in a block scope. This varible can not be accessed outside of it's scope. 
+*
 2. **What happens when we run the following code? Why?**
    ```javascript
 const favorite = 'Juan Pablo';
@@ -18,7 +18,7 @@ console.log(`Our favorite Marcy Lab family member is ${favorite}!`);
 favorite = 'Maya';
 console.log(`Actually, ${favorite} is my favorite.`);
    ```
-*It will log `Our favorite Marcy Lab family member is Juan Pablo!` because the varible ‘favorite’ is declared as a const variable which means it can not be changed once it is declared even if it is initiated again.  
+*It will log `Our favorite Marcy Lab family member is Juan Pablo!` because the variable ‘favorite’ is declared with the keyword const variable which means it can not be reassigned.  
 
 3. **What does the following code log? Why?**
    ```javascript
@@ -27,7 +27,7 @@ console.log(`Actually, ${favorite} is my favorite.`);
    score = 100; 
    console.log(score, newScore);
    ```
-*This will log ‘100, score’ because even if the variable ‘score’ was declared with a value of the number 90 it was initiated again with the number 100. The variable ‘newScore’ was declared with a value of the string ‘score’. 
+*This will log ‘100, 90’ because the variable ‘score’ was declared with a value of 90 it was reassigned with the value 100. The variable ‘newScore’ was declared with a value of the varible 'score' before it was reassigned, so it has a value of 90.  
 
 4. **Why doesn't the following code log an uppercase string? Change the code so that it does.**
    ```javascript

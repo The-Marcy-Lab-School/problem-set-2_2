@@ -68,3 +68,17 @@ function chessBoard() {
 triangle();
 fizzBuzz();
 chessBoard();
+
+
+function headAss(string){
+  let stringToLowercase = string.toLowerCase();
+  let stringToArray = stringToLowercase.split('');
+  
+  for (let i = 0 ; i <= stringToArray.length; i+= 1){
+    if (i % 2 === 0 ){
+      stringToArray[i] = stringToArray[i].toUpperCase();
+    }
+  }
+  return stringToArray.join('');
+}
+
