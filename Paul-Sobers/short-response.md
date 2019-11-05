@@ -7,9 +7,9 @@
       let singer = 'Omar Apollo';
     }
 
-    console.log(`My favorite singer is ${singer});
+    console.log(`My favorite singer is ${singer}`);
    ```
-Answer:This code log 'My favorite singer is Omar Apollo' because the variable `singer` was assigned 'Omar Apollo' and `console.log` called a string interpolation which is a string and template literal : ${singer} and `singer` is the value placed inside the template literal.
+Answer:This code log will give you back a reference error sayin singer is undefined. It is undefined because singer was declared in a block scope and we logging a string interpolation with a variable singer that is not recognzied because we are outside the scope.
 
 
 2. **What happens when we run the following code? Why?**
@@ -20,7 +20,7 @@ Answer:This code log 'My favorite singer is Omar Apollo' because the variable `s
    favorite = 'Maya';
    console.log(`Actually, ${favorite} is my favorite.`);
    ```
-Answer: When this code is ran `console.log` return the value 'Our favorite Marcy Lab Family member is Juan Pablo!' because `favorite` was a value of 'Juan Pablo' and because it was declared by `const` it cannot be reassigned. So when I try to reassign a value of 'Maya' to `favorite` I recieved an error saying `const variable` was already assigned so when I `console.log` (`Actually,  ${favorite} is my favorite.`); it return the value "Actually, Juan Pablo is my favorite."
+Answer: When this code is run it logs, 'Our favorite Marcy Lab Family member is Juan Pablo!' because `favorite` references 'Juan Pablo' because it was declared with `const` it cannot be reassigned. So when I try to reassign a value of 'Maya' to `favorite` it throws an error.
 
 
 3. **What does the following code log? Why?**
@@ -30,7 +30,7 @@ Answer: When this code is ran `console.log` return the value 'Our favorite Marcy
    score = 100; 
    console.log(score, newScore);
    ```
-Answer: This code log 100 90 because `score` was assigned the number value 90 and `newScore` was assigned `score` which had the number value 90 also. On line 30 `score` was reassigned a number value of 100 and because `newScore` wasn't reassigned also it kept the number value 90 and `console.log` return 100 90.
+Answer: This code logs 100 90 because `score` was assigned the number value 90 and `newScore` was assigned `score` which had the number value 90 also. On line 30 `score` was reassigned a number value of 100 and because `newScore` wasn't reassigned also it kept the number value 90 and `console.log` return 100 90.
 
 4. **Why doesn't the following code log an uppercase string? Change the code so that it does.**
    ```javascript
@@ -39,7 +39,7 @@ Answer: This code log 100 90 because `score` was assigned the number value 90 an
    let scream = greet;
    console.log(scream.toUpperCase()); 
    ```
-Answer: The following code does not log an uppercase string because the `scream` was not attached to the property `.toUpperCase` in the `console.log` on line 40. 
+Answer: The following code does not log an uppercase string because we did not call .toUpperCase on scream on line 40. 
 
 5. **What does the following log? Explain why, ensuring to explain how `someName` and `busy` were declared?**
    ```javascript
@@ -54,7 +54,7 @@ Answer: The following code does not log an uppercase string because the `scream`
 
    busy ? console.log(`${busy} evaluates to true`) : console.log(`{busy} evaluates to false.``);
    ```
-Answer: The following code will log ghost evaluates to true and {busy} evaluates to be false. The first log on line 53 evaluates to be true because `someName` was assigned `name` and `nickname` value by the OR logical operator which either value must be true , so on line 53 when `someName ?` was declared it was then asked to choose between a true or false value by the `question mark` ad depending on the trth value it will log one of the following. Since `name ` was undefined(falsey) and `nickname` was assigned a value which made it true the `console.log` logged 'ghost evaluates to true'. The second log {busy} evaluates to be false because on line 55 `busy` was assigned `children` and `homework` by the AND logical operator which both values must be true. So when it was asked (by the `?`) to pick a true or false value it picked `{busy} evaluates to false.` because since the AND logical operator was declared both values (children && homework) must be true in order for the vaule to evaluates to true.
+Answer: The following code will log "ghost evaluates to true" and "busy evaluates to be false."" The first log on line 53 evaluates to be true because `someName` was assigned `name` OR `nickname`.  so on line 53 when `someName ?` was declared it was then asked to choose between a true or false value by the `question mark` ad depending on the trth value it will log one of the following. Since `name ` was undefined(falsey) and `nickname` was assigned a truthy value, the program  logged 'ghost evaluates to true'. The second logs {busy} evaluates to be false because on line 55 `busy` was assigned `children` and `homework` using the AND logical operator. The logical AND shortcircuits on the first falsey value. Since children has a falsey value of null, we assign busy a value of null. Thus, the else statement on line 55 will execute.
 
 
 6. **The following code causes an infinite loop. Why?**
