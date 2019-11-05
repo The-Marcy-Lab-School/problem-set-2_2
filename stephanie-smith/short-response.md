@@ -28,7 +28,7 @@
    score = 100; 
    console.log(score, newScore);
    ```
-   - It logs 100 and 90. The variable `score` starts off as 90, while a new variable `newScore` is defined as `score`. This means both `score` and `newScore` equal 90. Then, `score` is redefined as 100. The value in `newScore` does not change to 100 despite the newly assigned value, because of the way the code cascades.
+   - It logs 100 and 90. The variable `score` starts off as 90, while a new variable `newScore` is defined as `score`. This means both `score` and `newScore` equal 90. Then, `score` is redefined as 100. The value in `newScore` does not change to 100 despite the newly assigned value, because it has not been reassigned to the new value. It still holds `score`'s old value.
 
 4. **Why doesn't the following code log an uppercase string? Change the code so that it does.**
    ```javascript
