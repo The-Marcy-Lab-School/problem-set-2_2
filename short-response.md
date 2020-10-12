@@ -3,11 +3,12 @@
 
 1. **What does the code below log? Why?**
    ```javascript
-    {
+   {
       let singer = 'Omar Apollo';
-    }
+   }
 
-    console.log(`My favorite singer is ${singer});
+   console.log(`My favorite singer is ${singer}`);
+
    ```
 
 2. **What happens when we run the following code? Why?**
@@ -21,9 +22,9 @@
 
 3. **What does the following code log? Why?**
    ```javascript
-   let score = 90; 
+   let score = 90;
    let newScore = score;
-   score = 100; 
+   score = 100;
    console.log(score, newScore);
    ```
 4. **Why doesn't the following code log an uppercase string? Change the code so that it does.**
@@ -31,7 +32,7 @@
    let greet = 'hello';
    greet.toUpperCase();
    let scream = greet;
-   console.log(scream); 
+   console.log(scream);
    ```
 
 5. **What does the following log? Explain why, ensuring to explain how `someName` and `busy` were declared?**
@@ -43,9 +44,9 @@
    let homework = 'lots';
    let busy = children && homework;
 
-   someName ? console.log(`${someName} evaluates to true`) : console.log(`{someName} evaluates to false.``);
+   someName ? console.log(`${someName} evaluates to true`) : console.log(`{someName} evaluates to false.`);
 
-   busy ? console.log(`${busy} evaluates to true`) : console.log(`{busy} evaluates to false.``);
+   busy ? console.log(`${busy} evaluates to true`) : console.log(`${busy} evaluates to false.`);
    ```
 
 6. **The following code causes an infinite loop. Why?**
@@ -58,4 +59,3 @@
      counter += 1;
    }
    ```
-
