@@ -1,7 +1,7 @@
 // Question 1: Looping a Triange
 function triangle() {
   // write your answer to question one below
-
+ 
 }
 
 // Question 2: FizzBuzz
