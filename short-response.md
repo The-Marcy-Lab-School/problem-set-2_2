@@ -44,7 +44,7 @@
    let homework = 'lots';
    let busy = children && homework;
 
-   someName ? console.log(`${someName} evaluates to true`) : console.log(`{someName} evaluates to false.`);
+   someName ? console.log(`${someName} evaluates to true`) : console.log(`${someName} evaluates to false.`);
 
    busy ? console.log(`${busy} evaluates to true`) : console.log(`${busy} evaluates to false.`);
    ```
