@@ -19,4 +19,4 @@ The problem prompts are in `README.md`. You are to write your solutions in the `
 You can preview the `index.html` file in the browser and open the Console to see your code's output.
   
 3. Commit frequently.
-4. When you are finished, push your changes to your remote `master` branch and submit the URL through Canvas.
+4. When you are finished, push your changes to your remote `master` branch.
